@@ -15,14 +15,12 @@ public class Mover : MonoBehaviour
 
     private void Update()
     {
-        
-
         if (_isMovingForward)
         {
             transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime);
 
-            if (transform.position.x>=_maxDistance)
-            {               
+            if (transform.position.x >= _maxDistance)
+            {
                 _isMovingForward = false;
             }
         }
@@ -31,9 +29,9 @@ public class Mover : MonoBehaviour
             transform.Translate(Vector3.right * -_moveSpeed * Time.deltaTime);
 
             if (transform.position.x <= _startPosition.x)
-            {               
+            {
                 _isMovingForward = true;
             }
-        }       
-    }   
+        }
+    }
 }
