@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 37231050}
   - component: {fileID: 37231049}
   - component: {fileID: 37231048}
+  - component: {fileID: 37231054}
+  - component: {fileID: 37231053}
   - component: {fileID: 37231052}
   m_Layer: 0
   m_Name: Cube (1)
@@ -223,7 +225,7 @@ Transform:
   m_GameObject: {fileID: 37231047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.61, y: -0.889, z: -1.37}
+  m_LocalPosition: {x: 7.24, y: -0.06, z: 0.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -238,13 +240,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 37231047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a2da58a2e8a56b47a40ee3af8cf4cf4, type: 3}
+  m_Script: {fileID: 11500000, guid: dd1c3bd539e1ed342baffa396f5ded95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleSpeed: 2
+  _maxScale: 4
+--- !u!114 &37231053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37231047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a80fcae75194c44ad725d0ee30e242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 4
-  _rotationSpeed: 150
-  _scaleSpeed: 2
-  _maxScale: 4
+  _maxDistance: 10
+--- !u!114 &37231054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37231047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed049526bf5b07419a40d18f478cb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotateSpeed: 120
 --- !u!1 &440281851
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a80fcae75194c44ad725d0ee30e242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 2
+  _moveSpeed: 4
   _maxDistance: -1
 --- !u!135 &440281853
 SphereCollider:
@@ -544,13 +571,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.040529564, y: -0, z: -0, w: 0.99917835}
+  m_LocalPosition: {x: -0.63, y: 1.56, z: -10.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.646, y: 0, z: 0}
 --- !u!1 &967369881
 GameObject:
   m_ObjectHideFlags: 0

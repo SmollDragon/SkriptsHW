@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+public class Mover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _maxDistance;
@@ -15,30 +15,25 @@ public class MoveForward : MonoBehaviour
 
     private void Update()
     {
-        Vector3 position = transform.position;
+        
 
         if (_isMovingForward)
         {
-            position.x += _moveSpeed * Time.deltaTime;
+            transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime);
 
-            if (position.x >= _maxDistance)
-            {
-                position.x = _maxDistance;
-
+            if (transform.position.x>=_maxDistance)
+            {               
                 _isMovingForward = false;
             }
         }
         else
         {
-            position.x -= _moveSpeed * Time.deltaTime;
+            transform.Translate(Vector3.right * -_moveSpeed * Time.deltaTime);
 
-            if (position.x <= _startPosition.x)
-            {
-                position.x = _startPosition.x;
+            if (transform.position.x <= _startPosition.x)
+            {               
                 _isMovingForward = true;
             }
-        }
-
-        transform.position = position;
+        }       
     }   
 }
